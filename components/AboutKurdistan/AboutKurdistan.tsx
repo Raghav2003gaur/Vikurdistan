@@ -107,7 +107,7 @@ const AboutKurdistan = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                (<span className="italic">'those who face death'</span>) are the
+                (<span className="italic">&apos;those who face death&apos;</span>) are the
                 military forces of the Kurdistan Region of Iraq. They are
                 responsible for the security of the region and are responsible for
                 protecting the people of the Kurdistan Region from external
@@ -122,7 +122,7 @@ const AboutKurdistan = () => {
               </p>
               <p>
                 Today, the Peshmerga are officially under the command of the
-                Kurdistan Regional Government's Ministry of Peshmerga Affairs. In
+                Kurdistan Regional Government&apos;s Ministry of Peshmerga Affairs. In
                 2003, during the Iraq War, the Peshmerga played a key role in the
                 mission to capture Saddam Hussein. They have also been involved in
                 the fight against ISIS in Iraq and Syria, where they have proven
@@ -163,15 +163,15 @@ const AboutKurdistan = () => {
                 legend, an evil Assyrian king named Zuhak conquered Iran and
                 ruled for one thousand years, causing spring to no longer come to
                 Kurdistan. During this time, two young men were sacrificed to
-                Zahak's serpents daily.
+                Zahak&apos;s serpents daily.
               </p>
               <p>
                 A nobleman named Fereydun led a revolt against Zahak, which was
                 led by a blacksmith named Kaveh(Kawa) who had lost six sons to
                 Zahak. Kaveh trained the young men who had been saved from
-                sacrifice into an army, and they marched to Zahak's castle where
+                sacrifice into an army, and they marched to Zahak&apos;s castle where
                 Kaveh killed the king with a hammer. The lighting of fires on
-                March 20, the day of Kaveh's victory, has become a symbol of
+                March 20, the day of Kaveh&apos;s victory, has become a symbol of
                 freedom and a way for Kurds to remember their strength as a
                 people. It is also a tradition to jump across a fire at Newroz.
               </p>
@@ -198,7 +198,7 @@ const AboutKurdistan = () => {
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 Kurdish men wear their traditional clothes routinely, not only on
-                special occasions. It's a two, three piece clothes, the top which
+                special occasions. It&apos;s a two, three piece clothes, the top which
                 is like a closed jacket ,pants which are called Shalvar (wide
                 trousers which close at the ankles closely) and a piece of cloth
                 around the waist named Pshten, and also a type of shoes called
@@ -212,7 +212,7 @@ const AboutKurdistan = () => {
                 the Kurdish dress is more commonly worn on special occasions.
               </p>
               <p>
-                The traditional Kurdish women's outfit includes either a vest
+                The traditional Kurdish women&apos;s outfit includes either a vest
                 called Helag or long-sleeved jacket called Salta or Kawaa, a long
                 overcoat worn over a gown. An underdress and puffy pants are worn
                 beneath the gown. A belt over the gown is also needed.

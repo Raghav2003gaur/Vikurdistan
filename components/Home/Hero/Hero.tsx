@@ -1,5 +1,4 @@
 import React from "react";
-import SearchBox from "@/components/Helper/SearchBox";
 
 const Hero = () => {
   return (

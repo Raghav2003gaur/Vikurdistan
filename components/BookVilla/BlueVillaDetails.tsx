@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 
 const galleryImages = [
@@ -41,21 +41,21 @@ const BlueVillaDetails = () => {
     setSelectedIndex(null);
   };
 
-  const showPrev = () => {
+  const showPrev = useCallback(() => {
     if (selectedIndex === null) return;
     setSelectedIndex((prev) =>
       prev === null
         ? null
         : (prev - 1 + galleryImages.length) % galleryImages.length
     );
-  };
+  }, [selectedIndex]);
 
-  const showNext = () => {
+  const showNext = useCallback(() => {
     if (selectedIndex === null) return;
     setSelectedIndex((prev) =>
       prev === null ? null : (prev + 1) % galleryImages.length
     );
-  };
+  }, [selectedIndex]);
 
   // Keyboard controls for lightbox (Esc to close, arrows to navigate)
   useEffect(() => {
@@ -73,7 +73,7 @@ const BlueVillaDetails = () => {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedIndex]);
+  }, [selectedIndex, showNext, showPrev, closeLightbox]);
 
   return (
     <div className="pt-24 pb-20 min-h-screen bg-gray-50">
