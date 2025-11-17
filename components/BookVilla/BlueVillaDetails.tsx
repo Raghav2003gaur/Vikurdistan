@@ -37,9 +37,9 @@ const BlueVillaDetails = () => {
     setSelectedIndex(index);
   };
 
-  const closeLightbox = () => {
+  const closeLightbox = useCallback(() => {
     setSelectedIndex(null);
-  };
+  }, []);
 
   const showPrev = useCallback(() => {
     if (selectedIndex === null) return;

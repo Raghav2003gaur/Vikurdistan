@@ -27,10 +27,10 @@ const RedVillaDetails = () => {
     setSelectedIndex(index);
   };
 
-  const closeLightbox = () => {
+  const closeLightbox = useCallback(() => {
     // Only close the image viewer; stay on the villa details page
     setSelectedIndex(null);
-  };
+  }, []);
 
   const showPrev = useCallback(() => {
     if (selectedIndex === null) return;

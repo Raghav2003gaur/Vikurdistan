@@ -2,13 +2,15 @@ import React from "react";
 import { FaHeart } from "react-icons/fa";
 import Image from "next/image";
 type Props = {
-  id: number;
-  image: string;
-  name: string;
-  location: string;
-  rating: number;
-  reviews: number;
-  price: number;
+  hotel: {
+    id: number;
+    image: string;
+    name: string;
+    location: string;
+    rating: number;
+    reviews: string;
+    price: string;
+  };
 };
 const HotelCard = ({ hotel }: Props) => {
   return (
