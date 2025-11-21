@@ -13,6 +13,48 @@ const trips = [
   },
 ];
 
+const storytellingBlocks = [
+  {
+    title: "Festival DNA",
+    copy:
+      "Set in the Przhè mountains near Choman, the Ski Rally blends Alpine-style racing with Kurdish hospitality. Expect live music, artisan markets, and evenings filled with cultural performances.",
+  },
+  {
+    title: "Legacy",
+    copy:
+      "We launched Iraq’s first counter rally in February 2018. Since then, thousands of international and local athletes have visited, and sponsors from around the world have backed the festival.",
+  },
+  {
+    title: "Why Kurdistan",
+    copy:
+      "Skiing here feels new: the region is recovering from instability and lacks traditional infrastructure, yet locals love snow and the mountains—our festival amplifies that passion while building access.",
+  },
+  {
+    title: "Global Recognition",
+    copy:
+      "International media and local TV continue to highlight the Rally. Every year the spotlight grows, announcing Kurdistan as an unexpected winter destination.",
+  },
+  {
+    title: "Community Impact",
+    copy:
+      "Through our Free to Run partnership we train refugee girls, offering them skiing skills and the chance to become community leaders who reclaim winter spaces.",
+  },
+  {
+    title: "Women's Empowerment",
+    copy:
+      "The Ski Rally is a safe space where girls learn resilience, teamwork, and public leadership through outdoor adventure—shifting mindsets about women’s roles in society.",
+  },
+];
+
+const activityHighlights = [
+  "Ski & snowboard racing",
+  "Cultural performances & traditional music",
+  "Local food and artisan markets",
+  "Workshops & youth-friendly programming",
+  "NGO & sponsor booths",
+  "Evening networking & entertainment",
+];
+
 const SkiRallyPage = () => {
   return (
     <div className="pt-24 pb-20 min-h-screen bg-gray-50">
@@ -27,52 +69,16 @@ const SkiRallyPage = () => {
         </header>
 
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 bg-white rounded-3xl shadow-xl p-8">
-          <div className="lg:col-span-2 space-y-4 text-gray-700 leading-relaxed">
-            <p>
-              Set in the stunning Przhè mountains in Choman, Erbil Province, this special winter festival mixes
-              top skiing and snowboarding with lively cultural events. Whether you’re an experienced athlete or a
-              beginner, take this chance to see the beauty of Kurdistan from a new angle.
-            </p>
-            <p>
-              Having hosted 6 different Ski Rally Festivals, we’ve mastered the art of providing a truly unique experience to this region.
-            </p>
-            <p>
-              We are the first company to have introduced the sport of skiing to Iraq and Kurdistan. Our festivals have reached thousands of sport
-              enthusiasts and have attracted various lucrative businesses as partners and sponsors.
-            </p>
-            <p>
-              We have also attracted attention from local channels and foreign media outlets, which allowed our festivals to be internationally recognized.
-            </p>
-            <p>
-              At first glance, Iraq is an unusual location to host a backcountry ski race. While the snow-covered mountains of the Kurdistan region
-              have long been used by shepherds and farmers, ski touring in the region is a new activity with very few people aware of it.
-            </p>
-            <p>
-              Given the tumultuous and violent history of this area, the region lacks ski infrastructure, equipment and knowledgeable skiers.
-            </p>
-            <p>
-              However, locals love to play in the snow in the winter and there is local interest in skiing. We, at VIKurdistan hope to continue to build
-              upon this shared love of winter with the Ski Rally and the Choman Ski Club.
-            </p>
-            <p>
-              The first Iraq Ski Rally took place In February 2018 as an experimental event. Located in the town of Choman, a small mountain town in northern Iraq along
-              the border with Iran, over 20 skiers participated, coming from Australia, United States, Switzerland, Denmark and Slovakia, alongside a large group of Kurdish and Arab skiers.
-            </p>
-            <p>
-              Key ACTIVITIES include ski and snowboard races, cultural performances and traditional music, local food and artisan markets, workshops and activities for youth, NGO and sponsor booths, evening entertainment and networking for guests and partners.
-            </p>
-            <p>
-              The Iraq Ski Rally has partnered with Free to Run, an international NGO, to include a group of girls living in refugee camps as part of the Ski Club. These girls have received ski training from professional instructors and have participated in the Ski Rally event.
-            </p>
-            <p>
-              Adventure-based sports like skiing can be a way for girls living in areas of conflict to build their physical, emotional and social well-being: developing them into community leaders so they can bring people together across cultural, ethnic and religious lines.
-            </p>
-            <p>
-              Finding ways for women and girls to safety and boldly by engaging in outdoor activities allows them to regain public space and changes their views about the roles that women have in society.
-            </p>
-            <p>
-              Skiing is one way to allow for an understanding and buy-in for women and to empower them to be part of the solution.
-            </p>
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {storytellingBlocks.map((block) => (
+              <article
+                key={block.title}
+                className="bg-slate-50 rounded-3xl border border-gray-100 p-6 shadow-lg flex flex-col justify-between animate-fade-up"
+              >
+                <h3 className="text-xl font-semibold text-blue-900 mb-3">{block.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{block.copy}</p>
+              </article>
+            ))}
           </div>
 
           <div className="space-y-5">
@@ -86,6 +92,17 @@ const SkiRallyPage = () => {
                 <p className="text-sm text-gray-600">{trip.dates}</p>
               </div>
             ))}
+            <div className="mt-6 bg-gradient-to-r from-red-600 to-pink-500 text-white rounded-2xl p-5 space-y-4">
+              <p className="text-sm uppercase tracking-[0.4em]">Key Activities</p>
+              <ul className="space-y-2 text-sm">
+                {activityHighlights.map((activity) => (
+                  <li key={activity} className="flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-white" />
+                    {activity}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
